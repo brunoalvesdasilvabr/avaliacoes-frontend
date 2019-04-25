@@ -25,6 +25,16 @@ const customIcon = {
     strokeColor: '#666666',
     strokeWeight: 3
 };
+const customIconClicked = {
+    path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+    fillColor: '#ffffff',
+    fillOpacity: 0.98,
+    scale: 0.98,
+    strokeColor: '#666666',
+    strokeWeight: 3
+};
+
+
 
 function addMarker(marker) {
     var marker = new google.maps.Marker({
@@ -33,6 +43,17 @@ function addMarker(marker) {
         icon: customIcon,
         title: marker.name
     });
+    if(marker.title){
+        var infoWindow = new google.maps.InfoWindow({
+           content:'<h1>'+marker.title+'</h1>'
+   
+         });
+         marker.addListener('click',function(){
+            marker.setIcon(customIconClicked)
+           infoWindow.open(map, marker)
+         
+         });
+        }
 }
 
 function initMap() {
