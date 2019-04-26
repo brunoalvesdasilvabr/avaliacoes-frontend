@@ -25,6 +25,8 @@ const customIcon = {
     strokeColor: '#666666',
     strokeWeight: 3
 };
+//HAVIA CONSEGUIDO PEGAR A COR USANDO customIcon.fillColor ao clicar a cor aparecia no console
+// como a nova propriedade de cor do svg customIcon, mas a cor nao mudava na tela
 const customIconClicked = {
     path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
     fillColor: '#ffffff',
@@ -44,17 +46,30 @@ function addMarker(marker) {
         title: marker.name
     });
     if(marker.title){
+
         var infoWindow = new google.maps.InfoWindow({
            content:'<h1>'+marker.title+'</h1>'
-   
+
          });
-         marker.addListener('click',function(){
-            marker.setIcon(customIconClicked)
-           infoWindow.open(map, marker)
-         
+
+        marker.addListener('click',function(){
+              infoWindow.open(map, marker)
+              marker.setIcon(customIconClicked)
+              console.log(infoWindow)
          });
+
+         //NAO CONSEGUI PEGAR O EVENTO OU ESTADO EM QUE A INFOWINDOW FECHA
+         // PARA PODER SETAR A COR CORRETA DO MARKER, POR ISSO ACABEI SETANDO A COR COM UM DOUBLECLICK
+         marker.addListener('dblclick',function(){
+               infoWindow.close(map, marker)
+               marker.setIcon(customIcon)
+
+          });
+
         }
+
 }
+
 
 function initMap() {
     var mapOptions = {
