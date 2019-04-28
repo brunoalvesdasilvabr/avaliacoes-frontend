@@ -1,9 +1,4 @@
-*, html, body{
-  box-sizing: border-box;
-  margin:0;
-  padding: 0;
- 
-}
+
 
 
 header{
@@ -11,16 +6,19 @@ header{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding:30px;
+  padding:18px;
   background-color: #2b324f;
   color:white;
 }
 
+.header-links p{
+  font-size: 10px;
+}
 
 header .header-info p,.header-profile{
-  font-size:23px;
+  font-size:16px;
   font-family: Assistant;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer
 
 }
@@ -32,19 +30,29 @@ header .header-profile, .header-info{
   display:flex;
   align-items: center;
 }
+.header-info p{
+  margin-right: 15px;
+}
+
+.header-info{
+  position: relative;
+  top: -9px;
+}
 header .header-info a{
   padding:5px 10px;
   padding-left: 27px;
   border-radius:20px;
   background-color:#494f68;
   position:relative;
-  margin-top: 0;
+  top: -4px;
   color: white;
   cursor: pointer;
 }
-header .header-info svg{
+.glyphicon-info-sign{
     width: 30px;
-    height: 30px;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
 }
 header .header-info a:before{
   content:" ";
@@ -78,8 +86,8 @@ header .header-profile-photo{
 }
 .bottom-header >*{
   color:white;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 300;
   text-transform: uppercase;
   font-family: Assistant;
   cursor: pointer;

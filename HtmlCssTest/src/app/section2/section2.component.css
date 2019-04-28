@@ -1,0 +1,96 @@
+
+.section2{
+    background-color:#eeeeee;
+    padding-bottom: 124px;
+}
+.section-links{
+    width:218px;
+    margin-top: 10px
+}
+.section-links p{
+     font-family: Assistant;
+     font-size: 18px;
+     padding-bottom: 30px;
+     cursor: pointer;
+}
+.icon-arrow{
+    margin-left: 60px;
+}
+.icon-arrow2{
+    margin-left: 78px;
+}
+
+.wrap-box{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;  
+    margin-top: 50px;
+}
+
+.box-info{
+    background-color: #2b324f;
+    color:white;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+}
+.box-info header{
+    height: 50px;
+}
+
+.sorteioHover:hover{
+    border-bottom: 4px solid green;
+    cursor: pointer;
+}
+.box-container{
+    display: flex;
+}
+
+.box-info .box-info-premios ,.glyphicon-calendar,.header-box{
+    font-size: 20px;
+
+}
+.glyphicon-calendar{
+    position: relative;
+    top: 10px;
+}
+.glyphicon{
+    margin-right: 10px;
+}
+.box-info-data{
+    margin-left: 29px;
+    position: relative;
+    top: -11px;
+    font-weight: 700;
+}
+
+.box-info-data::first-letter{
+    font-size: 11px;
+   
+}
+.box-info-first{
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+}
+.box-info .box-notification2{
+    border:none;
+    text-align: center
+}
+
+.box-notification2 a{
+    font-size: 13px;
+    color:white;
+    display: block;
+    cursor: pointer
+}
+
+.box-info-notification{
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
