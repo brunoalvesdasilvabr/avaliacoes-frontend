@@ -5,7 +5,10 @@
     background-color: #135e95;
 }
 
+.buttonIcon{
+    top: 3px;
 
+}
 .background-left{
     background-image: url("../img/Capturar.PNG");
     background-size: cover;
@@ -68,3 +71,4 @@ form .btn-valid{
 form .btn-valid:active{
     transform: translateY(2px)
 }
+
