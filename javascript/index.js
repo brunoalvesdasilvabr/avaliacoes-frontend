@@ -58,8 +58,7 @@ function addMarker(marker) {
               console.log(infoWindow)
          });
 
-         //NAO CONSEGUI PEGAR O EVENTO OU ESTADO EM QUE A INFOWINDOW FECHA
-         // PARA PODER SETAR A COR CORRETA DO MARKER, POR ISSO ACABEI SETANDO A COR COM UM DOUBLECLICK
+        //For fvor considerem esse commit para quetão 1 (d)
          infoWindow.addListener('closeclick', function() {
         marker.setIcon(customIcon)
 
