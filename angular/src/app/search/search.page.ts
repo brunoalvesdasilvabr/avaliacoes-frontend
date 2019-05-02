@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { legends} from '../names/nameslist';
 
 @Component({
   selector: 'app-search',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SearchPage {
   searchInput : string;
+  legends: Array<string> = [];
   results = [];
 
   ngOnInit() {
@@ -14,6 +16,6 @@ export class SearchPage {
 
   onSearch() {
     console.log(`Search: ${this.searchInput}`)
-    
+
   }
 }

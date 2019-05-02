@@ -60,11 +60,11 @@ function addMarker(marker) {
 
          //NAO CONSEGUI PEGAR O EVENTO OU ESTADO EM QUE A INFOWINDOW FECHA
          // PARA PODER SETAR A COR CORRETA DO MARKER, POR ISSO ACABEI SETANDO A COR COM UM DOUBLECLICK
-         marker.addListener('dblclick',function(){
-               infoWindow.close(map, marker)
-               marker.setIcon(customIcon)
+         infoWindow.addListener('closeclick', function() {
+        marker.setIcon(customIcon)
 
-          });
+ });
+
 
         }
 
