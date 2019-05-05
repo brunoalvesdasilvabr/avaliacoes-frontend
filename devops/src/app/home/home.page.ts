@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingControlle } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import * as _ from 'lodash';
 
 @Component({
@@ -20,13 +20,11 @@ export class HomePage {
   ngOnInit() {
     this.printOnConsole();
     this.presentLoading();
-
-
     this.randomPhotos();
 
     setTimeout( () => {
       try {
-        dismissLoading();
+        this.dismissLoading();
       } catch(err) {
         console.error(err);
         alert('Error dismissing loader');

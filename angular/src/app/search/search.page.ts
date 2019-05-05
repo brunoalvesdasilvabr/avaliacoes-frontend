@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { legends} from '../names/nameslist';
 
 @Component({
@@ -6,16 +6,29 @@ import { legends} from '../names/nameslist';
   templateUrl: 'search.page.html',
   styleUrls: ['search.page.scss']
 })
-export class SearchPage {
-  searchInput : string;
+export class SearchPage implements OnInit{
   legends: Array<string> = [];
-  results = [];
+  filteredLegends : Array<string> = [];
+ private _searchInput: string;
+ get searchInput():string{
+   return this._searchInput
+ }
 
+set searchInput(value: string){
+this.searchInput = value;
+this.filteredLegends = this.filterLegends(value)
+}
+
+filterLegends(searchString:string){
+  return this.legends.filter(legends => legends.toLowerCase().indexOf(searchString.toLowerCase())!==-1)
+}
   ngOnInit() {
+    console.log(this.legends = legends)
+    console.log(this.filteredLegends = legends)
+    this.legends = legends;
+    this.filteredLegends = this.legends;
+
   }
 
-  onSearch() {
-    console.log(`Search: ${this.searchInput}`)
 
-  }
 }
