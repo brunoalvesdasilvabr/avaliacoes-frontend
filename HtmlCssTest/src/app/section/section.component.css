@@ -5,12 +5,14 @@
     background-color: #135e95;
 }
 
-.buttonIcon{
+.btnIcon{
     top: 3px;
-
+    width:10px;
+    height: 10px;
+    margin-left: 10px;
 }
 .background-left{
-    background-image: url("../img/Capturar.PNG");
+    background-image: url("../../assets/img/Capturar.PNG");
     background-size: cover;
     background-position: center;
     width: 40%;
@@ -29,7 +31,7 @@
     color:white;
 }
 .background-right{
-    background-image: url("../img/Capturar2.PNG");
+    background-image: url("../../assets/img/Capturar2.PNG");
     background-size: cover;
     background-position: center;
     width: 40%;

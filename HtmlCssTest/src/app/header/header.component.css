@@ -36,30 +36,32 @@ header .header-profile, .header-info{
 
 .header-info{
   position: relative;
-  top: -9px;
+  top: -10px;
 }
 header .header-info a{
-  padding:5px 10px;
+  padding:3px 10px;
   padding-left: 27px;
   border-radius:20px;
   background-color:#494f68;
   position:relative;
-  top: -4px;
+  top: -6px;
   color: white;
   cursor: pointer;
 }
-.glyphicon-info-sign{
-    width: 30px;
+.infoimg{
+    width: 20px;
   position: relative;
   top: -5px;
   cursor: pointer;
+  margin-right:25px;
+  margin-left: 15;
 }
 header .header-info a:before{
   content:" ";
   width:10px;
   height:10px;
   position: absolute;
-  top:10px;
+  top:8px;
   left:10px;
   border-radius:50%;
   border:1px solid white;
@@ -79,7 +81,6 @@ header .header-profile-photo{
   background-color:#494f68;
   display:flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   padding:20px;
   position: relative;
